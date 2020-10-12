@@ -7,6 +7,10 @@
 
 # dependencies
 /node_modules
+/node_modules_ngrx
+/node_modules_ngxs
+/node_modules_akita
+/node_modules_rxjs
 
 # IDEs and editors
 /.idea
