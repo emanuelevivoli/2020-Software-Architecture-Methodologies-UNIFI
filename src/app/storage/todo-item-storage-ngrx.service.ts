@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Store } from '@ngrx/store';
+import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { FakeBackendService } from '../data/fake-backend.service';
 import { convertDateToSeconds } from '../model/date-time-seconds';
@@ -17,9 +17,9 @@ import * as fromTodoItem from './reducers/todo-item.reducer';
   providedIn: 'root'
 })
 export class TodoItemStorageNgrxService implements TodoItemStorage {
-  filter$: Observable<ItemFilter> = this.store.select(selectFilter);
-  sort$: Observable<ItemSort> = this.store.select(selectSort);
-  allItems$: Observable<TodoItem[]> = this.store.select(selectFilteredAndSortedItems);
+  filter$: Observable<ItemFilter> = this.store.pipe(select(selectFilter));
+  sort$: Observable<ItemSort> = this.store.pipe(select(selectSort));
+  allItems$: Observable<TodoItem[]> = this.store.pipe(select(selectFilteredAndSortedItems));
 
   constructor(
     private backend: FakeBackendService,
@@ -30,7 +30,7 @@ export class TodoItemStorageNgrxService implements TodoItemStorage {
     return this.store.dispatch(new FetchTodoItems());
   }
   getItem(id: string): Observable<TodoItem> {
-    return this.store.select(selectItemById(id));
+    return this.store.pipe(select(selectItemById(id)));
   }
   addItem(item: Partial<TodoItem>): void {
     this.backend.addOne(item).subscribe(addedItem => {
