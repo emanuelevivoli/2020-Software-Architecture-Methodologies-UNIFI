@@ -1,7 +1,20 @@
-# SWAM Project - State Management Comparison
+# 2020 Software Architecture Methodologies @ UniFi
 
-## Intoduction
-The project was to compare modes to obtain state-management in Angular applications. We used plain rxjs, Akita, NgRx and NgXs as in [this blog](https://ordina-jworks.github.io/angular/2018/10/08/angular-state-management-comparison.html) and apply the best one in the project [segreteria-3smb](https://github.com/emanuelevivoli/segreteria-3smb).
+
+<p align="center">
+    <img src="University_of_Florence.png" alt="logo-UNIFI" width="300"/>
+</p>
+
+
+# Introduction
+This folder contains code and documentations for the project "State Management Comparison" assigned in the class "Software Architecture Methodologies" 2020/2021.
+
+The project aims to compare state-management methods in Angular applications. 
+We took inspiration from [this blog](https://ordina-jworks.github.io/angular/2018/10/08/angular-state-management-comparison.html) and applied the best one in the project [segreteria-3smb](https://github.com/emanuelevivoli/segreteria-3smb) by using:
+- plain rxjs
+- Akita
+- NgRx
+- NgXs
 
 ## Description
 Comparison application for state management solutions in Angular.
@@ -20,3 +33,7 @@ To run the Angular app you can run `ng serve` and visiting the application on `h
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli).
 
 The documentation file **SWAM Report** aims to describe the comparison between those different method fot state managing.
+
+# Contacts
+If you are interested in something, don't hesitate to contact me or open an issue.
+
